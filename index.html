@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Luisa Morelos | Beyond the CV</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="home">
+
+        <!-- Nombre -->
+        <h1>LUISA<br>MORELOS</h1>
+
+        <!-- Temis -->
+        <img
+            src="assets/temis.png"
+            alt="Themis"
+            class="themis"
+        >
+
+        <!-- Music Player -->
+        <div class="music-player">
+
+            <div class="music-header">
+                <span class="frequency">FREQUENCY 108.4</span>
+                <span class="song-title">God is a Woman — Ariana Grande</span>
+            </div>
+
+            <!-- Visualizer -->
+            <div class="visualizer" id="visualizer">
+
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+            <!-- Controls -->
+            <div class="music-controls">
+
+                <button
+                    id="playButton"
+                    class="play-button"
+                    aria-label="Play music"
+                >
+                    ▶
+                </button>
+
+                <div class="progress-container">
+                    <div
+                        id="progressBar"
+                        class="progress-bar"
+                    ></div>
+                </div>
+
+                <button
+                    id="volumeButton"
+                    class="volume-button"
+                    aria-label="Mute music"
+                >
+                    🔊
+                </button>
+
+            </div>
+
+            <audio id="audio">
+                <source
+                    src="assets/Ariana Grande - God is a woman.mp3"
+                    type="audio/mpeg"
+                >
+            </audio>
+
+        </div>
+
+        <!-- Main buttons -->
+        <div class="buttons">
+
+           <a href="professional.html" class="main-button">
+    Professional Profile
+</a>
+
+<a href="beyond.html" class="main-button">
+    Beyond the CV
+</a>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
