@@ -1,0 +1,423 @@
+/* =========================
+   BEYOND THE CV - HOME
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #24133d 0%,
+            #100b1c 45%,
+            #050509 100%
+        );
+
+    color: #eadcff;
+
+    font-family: "Courier New", monospace;
+
+    overflow: hidden;
+}
+
+.home {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+}
+
+
+/* =========================
+   NOMBRE
+   ========================= */
+
+h1 {
+    position: absolute;
+
+    top: 30px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 100%;
+
+    text-align: center;
+
+    font-size: clamp(3rem, 6vw, 5rem);
+
+    line-height: 1.15;
+
+    letter-spacing: 0.25em;
+
+    font-weight: 700;
+
+    color: #d9b8ff;
+
+    text-shadow:
+        0 0 8px #b77aff,
+        0 0 20px rgba(183, 122, 255, 0.7),
+        0 0 40px rgba(150, 80, 255, 0.45);
+}
+
+
+/* =========================
+   TEMIS
+   ========================= */
+
+.themis {
+    width: min(520px, 65vw);
+
+    max-height: 42vh;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(0 0 8px #d7b3ff)
+        drop-shadow(0 0 25px rgba(180, 100, 255, 0.8))
+        drop-shadow(0 0 55px rgba(130, 50, 255, 0.45));
+
+    margin-bottom: 20px;
+
+    animation: themisGlow 4s ease-in-out infinite;
+}
+
+
+/* =========================
+   MUSIC PLAYER
+   ========================= */
+
+.music-player {
+    width: 330px;
+
+    padding: 14px 18px 12px;
+
+    margin-bottom: 28px;
+
+    background: rgba(5, 5, 9, 0.82);
+
+    border: 2px solid #d8b4ff;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 0 8px #d8b4ff,
+        0 0 22px rgba(180, 110, 255, 0.55),
+        0 0 45px rgba(150, 70, 255, 0.25);
+}
+
+
+/* Información de la canción */
+
+.music-header {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+    margin-bottom: 9px;
+}
+
+.frequency {
+    color: #b98cff;
+
+    font-size: 0.55rem;
+
+    letter-spacing: 0.15em;
+}
+
+.song-title {
+    color: #eadcff;
+
+    font-size: 0.72rem;
+
+    letter-spacing: 0.04em;
+}
+
+
+/* =========================
+   VISUALIZER
+   ========================= */
+
+.visualizer {
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 3px;
+
+    margin-bottom: 10px;
+}
+
+.visualizer span {
+    width: 5px;
+
+    height: 12px;
+
+    border-radius: 10px;
+
+    background: #d9b8ff;
+
+    box-shadow:
+        0 0 6px #d8b4ff,
+        0 0 12px rgba(180, 110, 255, 0.7);
+
+    transition:
+        height 0.12s ease,
+        opacity 0.12s ease;
+}
+
+
+/* =========================
+   CONTROLES
+   ========================= */
+
+.music-controls {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+/* Play */
+
+.play-button {
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    border: 2px solid #d8b4ff;
+
+    border-radius: 50%;
+
+    background: rgba(5, 5, 9, 0.8);
+
+    color: #d9b8ff;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 7px #d8b4ff;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.play-button:hover {
+    transform: scale(1.1);
+
+    background: rgba(180, 110, 255, 0.18);
+
+    box-shadow:
+        0 0 10px #d8b4ff,
+        0 0 20px rgba(180, 110, 255, 0.7);
+}
+
+
+/* Barra */
+
+.progress-container {
+    flex: 1;
+
+    height: 5px;
+
+    background: rgba(217, 184, 255, 0.18);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+.progress-bar {
+    width: 0%;
+
+    height: 100%;
+
+    background: #d9b8ff;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 0 7px #d8b4ff;
+}
+
+
+/* Volumen */
+
+.volume-button {
+    border: none;
+
+    background: transparent;
+
+    color: #d9b8ff;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    padding: 0;
+
+    transition:
+        transform 0.2s ease,
+        text-shadow 0.2s ease;
+}
+
+.volume-button:hover {
+    transform: scale(1.15);
+
+    text-shadow:
+        0 0 8px #d8b4ff,
+        0 0 18px #b77aff;
+}
+
+
+/* =========================
+   BOTONES PRINCIPALES
+   ========================= */
+
+.buttons {
+    display: flex;
+
+    gap: 70px;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.main-button {
+    width: 390px;
+
+    padding: 22px 30px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    color: #e7cfff;
+
+    background: rgba(5, 5, 9, 0.75);
+
+    border: 2px solid #d8b4ff;
+
+    border-radius: 50px;
+
+    font-size: 1.25rem;
+
+    letter-spacing: 0.08em;
+
+    box-shadow:
+        0 0 8px #d8b4ff,
+        0 0 25px rgba(180, 110, 255, 0.55);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease,
+        color 0.3s ease;
+}
+
+.main-button:hover {
+    transform: translateY(-6px) scale(1.03);
+
+    color: #ffffff;
+
+    background: rgba(155, 95, 220, 0.18);
+
+    box-shadow:
+        0 0 12px #e5caff,
+        0 0 35px rgba(190, 120, 255, 0.8),
+        0 0 70px rgba(150, 70, 255, 0.45);
+}
+
+
+/* =========================
+   ANIMACIÓN DE TEMIS
+   ========================= */
+
+@keyframes themisGlow {
+
+    0%,
+    100% {
+        filter:
+            drop-shadow(0 0 8px #d7b3ff)
+            drop-shadow(0 0 25px rgba(180, 100, 255, 0.7))
+            drop-shadow(0 0 45px rgba(130, 50, 255, 0.35));
+    }
+
+    50% {
+        filter:
+            drop-shadow(0 0 12px #ead6ff)
+            drop-shadow(0 0 35px rgba(195, 130, 255, 0.9))
+            drop-shadow(0 0 65px rgba(150, 70, 255, 0.5));
+    }
+}
+
+
+/* =========================
+   PANTALLAS PEQUEÑAS
+   ========================= */
+
+@media (max-width: 800px) {
+
+    .home {
+        padding: 25px;
+    }
+
+    h1 {
+        top: 25px;
+
+        font-size: 2.5rem;
+    }
+
+    .themis {
+        width: 80vw;
+
+        margin-bottom: 15px;
+    }
+
+    .music-player {
+        width: min(88vw, 330px);
+
+        margin-bottom: 25px;
+    }
+
+    .buttons {
+        flex-direction: column;
+
+        gap: 25px;
+
+        width: 100%;
+    }
+
+    .main-button {
+        width: min(90vw, 390px);
+
+        font-size: 1rem;
+    }
+}
